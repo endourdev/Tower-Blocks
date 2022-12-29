@@ -1,0 +1,39 @@
+{
+  "name": "tower-blocks",
+  "version": "1.0.0",
+  "description": "A simple game",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "icon": "./src/logo.ico",
+    "appId": "io.github.tower-blocks",
+    "productName": "Tower Blocks",
+    "nsis": {
+      "artifactName": "Tower Blocks Setup ${version}.${ext}",
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "./src/logo.ico",
+      "uninstallerIcon": "./src/logo.ico",
+      "deleteAppDataOnUninstall": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fofhgit/tower-blocks.git"
+  },
+  "author": "Wodd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fofhgit/tower-blocks/issues"
+  },
+  "homepage": "https://github.com/fofhgit/tower-blocks#readme",
+  "devDependencies": {
+    "discord-rpc": "^4.0.1",
+    "electron": "^22.0.0",
+    "electron-builder": "^23.6.0"
+  }
+}
