@@ -27,3 +27,35 @@ app.on('window-all-closed', () => {
     app.quit()
   }
 })
+
+const RPC = require("discord-rpc");
+const rpc = new RPC.Client({
+    transport: "ipc"
+});
+
+rpc.on("ready", () => {
+    
+    rpc.setActivity({
+      buttons: [
+        { label: `Nous Rejoindre`, url: `https://discord.gg/zuwvnrKBXy` }
+    ],
+        details: "Martyrise sa barre Espace",
+        startTimestamp: new Date(),
+        largeImageKey: "logo",
+        largeImageText: "Tu aimes bien ?"
+        
+        
+    });
+    const terminal_msg = "Le rich presence est en place regarde ton Discord !"
+    console.log(terminal_msg);
+    const ok = true
+    if (ok === true) {
+      console.log(ok)
+    } else {
+      console.warn("Le rich presence n'as pas été mis en place !")
+    }
+});
+
+rpc.login({
+    clientId: "1057264127569047583"
+})
